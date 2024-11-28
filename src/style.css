@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+:root {
+  --background: black;
+  --foreground: #f0f0f5;
+  --primary: #4808dc;
+  --secondary: #04d361;
+  --tertiary: #e83f5b;
+}
+
+html,
+body {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.bebas-neue-regular {
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2rem 2.5rem;
+}
+
+header {
+  position: sticky;
+  height: 4rem;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  z-index: 3;
+}
+
+header img {
+  /* height: 50px; */
+  width: 100%;
+  vertical-align: bottom;
+}
+
+button {
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--foreground);
+  padding: 0.5rem 1rem;
+}
+
+header .brand {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 0;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding: 1rem 0; */
+  background: var(--background);
+}
+
+h1 {
+  font-size: 2.5rem;
+  display: inline;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+nav ul {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 1rem;
+  color: var(--foreground);
+}
+
+a {
+  color: var(--foreground);
+  text-decoration: none;
+  font-size: 1.5rem !important;
+}
+
+p {
+  size: 1rem;
+  font-weight: bold;
+}
+
+section.new-drop {
+  height: calc(100vh - 4rem);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+section.new-drop img {
+  width: 100%;
+}
+
+section.content {
+  padding: 2rem;
+  font-size: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 10rem 0rem;
+  place-items: start;
+}
+
+section.content h2 {
+  position: relative;
+  z-index: 2;
+}
+
+/* swap section  order */
+.content:nth-child(odd) {
+  grid-template-columns: 1fr 1fr;
+}
+
+section.canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  /* debug */
+  /* border: 1px solid snow; */
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  /* pointer-events: none; */
+}
+
+/* canvas {
+  width: 100%;
+  height: 100%;
+} */
+
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--foreground);
+  color: var(--background);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+}
+
+.loader span {
+  font-size: 12rem;
+}
+
+.hide {
+  display: none;
+}
